@@ -6,7 +6,8 @@
   "description": "pomelo insight studio",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "dev": "webpack-dev-server --config build/dev.config.js"
+    "dev": "webpack-dev-server --config build/dev.config.js",
+    "lint": "tslint --project . -c tslint.json "
   },
   "dependencies": {
     "js-cookie": "^2.2.1",
