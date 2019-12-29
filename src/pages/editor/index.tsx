@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-import EditorCore from '../../components/editorCore';
+import { EditorCore } from 'src/components/editorCore';
 
-import css from './style.scss';
+import css from 'src/components/editorCore/style.scss';
 
 class Studio extends Component {
   render() {

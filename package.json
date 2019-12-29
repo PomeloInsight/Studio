@@ -9,10 +9,12 @@
     "dev": "webpack-dev-server --config build/dev.config.js"
   },
   "dependencies": {
+    "js-cookie": "^2.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@types/js-cookie": "^2.2.4",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "autoprefixer": "^9.7.3",

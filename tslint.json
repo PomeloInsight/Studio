@@ -2,9 +2,14 @@
   "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
   "extends": ["tslint-microsoft-contrib/recommended"],
   "rules": {
-    "no-relative-imports": false,
-    "import-name": false,
+    "import-name": [
+      true,
+      null,
+      { "react": "React", "styleScss": "css" }
+    ],
     "export-name": false,
-    "whitespace": [true, "check-branch", "check-operator", "check-separator", "check-typecast"]
+    "no-relative-imports": true,
+    "no-default-export": true,
+    "whitespace": [true, "check-branch", "check-operator", "check-separator"]
   }
 }

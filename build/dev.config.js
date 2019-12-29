@@ -12,6 +12,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json', '.scss', '.css'],
+    alias: {
+      src: resolve('src'),
+    },
   },
 
   output: {
