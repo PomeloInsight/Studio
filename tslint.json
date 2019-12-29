@@ -1,0 +1,10 @@
+{
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
+  "extends": ["tslint-microsoft-contrib/recommended"],
+  "rules": {
+    "no-relative-imports": false,
+    "import-name": false,
+    "export-name": false,
+    "whitespace": [true, "check-branch", "check-operator", "check-separator", "check-typecast"]
+  }
+}
