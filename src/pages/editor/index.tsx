@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { initializeIcons } from 'office-ui-fabric-react';
 
 import { EditorCore } from 'src/components/editorCore';
 
 import css from 'src/components/editorCore/style.scss';
+
+initializeIcons();
 
 class Studio extends Component {
   render() {
