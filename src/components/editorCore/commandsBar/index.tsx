@@ -3,10 +3,12 @@ import { CommandBar } from 'office-ui-fabric-react';
 
 import { left, right } from 'src/components/editorCore/commandsBar/createCommands';
 
+import css from 'src/components/editorCore/commandsBar/style.scss';
+
 class CommandsBar extends Component {
   render() {
     return (
-      <div>
+      <div className={css.commandBar}>
         <CommandBar items={left()} farItems={right()} />
       </div>
     );
