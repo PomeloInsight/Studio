@@ -51,9 +51,9 @@ function left(): ICommandBarItemProps[] {
       createItem(commandKeys.alignJustify, 'AlignJustify'),
     ]),
 
-    createItem(commandKeys.indent, 'IncreaseIndentLegacy', [
-      createItem(commandKeys.indent, 'IncreaseIndentLegacy'),
-      createItem(commandKeys.outIndent, 'DecreaseIndentLegacy'),
+    createItem(commandKeys.indent, 'IncreaseIndent', [
+      createItem(commandKeys.indent, 'IncreaseIndent'),
+      createItem(commandKeys.outIndent, 'DecreaseIndent'),
     ]),
 
     createItem(commandKeys.ol, 'BulletedList', [
@@ -61,7 +61,7 @@ function left(): ICommandBarItemProps[] {
       createItem(commandKeys.ul, 'NumberedList'),
     ]),
 
-    createItem(commandKeys.taskList, 'TaskManager'),
+    createItem(commandKeys.taskList, 'TaskList'),
 
     createItem(commandKeys.quote, 'RightDoubleQuote'),
     createItem(commandKeys.sub, 'Subscript'),
@@ -69,9 +69,9 @@ function left(): ICommandBarItemProps[] {
     createItem(commandKeys.code, 'Code'),
     createItem(commandKeys.hr, 'Remove'),
     createItem(commandKeys.table, 'Table'),
-    createItem(commandKeys.image, 'ImageSearch'),
+    createItem(commandKeys.image, 'FileImage'),
     createItem(commandKeys.column, 'DoubleColumn'),
-    createItem(commandKeys.toc, 'KnowledgeArticle'),
+    createItem(commandKeys.toc, 'Org'),
     createItem(commandKeys.math, 'NumberField'),
   ];
 }

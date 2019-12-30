@@ -55,7 +55,7 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -64,6 +64,11 @@ module.exports = {
             },
           },
         ],
+      },
+
+      {
+        test: /\.(png|jpe?g|gif|woff2?)$/,
+        use: 'file-loader',
       },
     ],
   },

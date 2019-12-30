@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { initializeIcons } from 'office-ui-fabric-react';
 
+import { initialFabricIcons } from 'src/global/ts/fabric-icons';
 import { EditorCore } from 'src/components/editorCore';
 
-import css from 'src/components/editorCore/style.scss';
+import css from 'src/pages/editor/style.scss';
 
-initializeIcons();
+initialFabricIcons();
 
 class Studio extends Component {
   render() {
     return (
-      <div className={css.root}>
+      <div className={css.editor}>
         <EditorCore />
       </div>
     );
