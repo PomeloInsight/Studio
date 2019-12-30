@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 const { resolve } = require('./utils');
 
 module.exports = {
@@ -78,6 +80,12 @@ module.exports = {
       filename: 'index.html',
       template: resolve('src/templates/index.pug'),
     }),
+    new CopyPlugin([
+      {
+        from: resolve('src/assets'),
+        to: resolve('dist/assets'),
+      },
+    ]),
   ],
 
   devServer: {

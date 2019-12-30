@@ -1,4 +1,4 @@
-import { registerIcons } from '@uifabric/styling';
+import { registerDefaultFontFaces, registerIcons } from '@uifabric/styling';
 import * as fabricIconsMap from 'src/global/ts/fabric-icons.json';
 
 const icons: { [key: string]: string } = {};
@@ -15,4 +15,8 @@ function initialFabricIcons() {
   });
 }
 
-export { initialFabricIcons };
+function initialFabricFonts(url = '/assets') {
+  registerDefaultFontFaces(url);
+}
+
+export { initialFabricIcons, initialFabricFonts };
