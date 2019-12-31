@@ -11,13 +11,13 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "experimentalDecorators": true,
     "jsx": "react",
     "sourceMap": true,
     "rootDir": ".",
     "baseUrl": ".",
-    "typeRoots": ["./typings"]
+    "types": ["jest"],
+    "typeRoots": ["./typings", "./node_modules/@types"]
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
