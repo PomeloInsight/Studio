@@ -9,7 +9,9 @@ class CommandsBar extends Component {
   render() {
     return (
       <div className={css.commandBar}>
-        <CommandBar items={left()} farItems={right()} />
+        <div className={css.commandBarContainer}>
+          <CommandBar items={left()} farItems={right()} />
+        </div>
       </div>
     );
   }

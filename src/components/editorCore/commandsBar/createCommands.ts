@@ -2,7 +2,7 @@ import { ICommandBarItemProps } from 'office-ui-fabric-react';
 import { commandKeys } from 'src/components/editorCore/commandsBar/commandKeys';
 import { commandsBarI18n } from 'src/i18n/components/editorCore/commandsBar';
 
-const createItem = <T>(key: string, icon?: string, items?: ICommandBarItemProps[]): ICommandBarItemProps => ({
+const createItem = (key: string, icon?: string, items?: ICommandBarItemProps[]): ICommandBarItemProps => ({
   key,
   text: commandsBarI18n.label[key],
   iconOnly: !!icon,

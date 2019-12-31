@@ -55,7 +55,7 @@ const zhCN = {
     [commandKeys.fontSizeH2]: '二级标题',
     [commandKeys.fontSizeH3]: '三级标题',
     [commandKeys.fontSizeH4]: '四级标题',
-    [commandKeys.fontFamilyDefault]: '默认',
+    [commandKeys.fontFamilyDefault]: '默认字体',
     [commandKeys.fontFamilyNotoSansSC]: 'NotoSansSC',
     [commandKeys.fontFamilyNotoSerifSC]: 'NotoSerifSC',
     [commandKeys.fontFamilySlabo]: 'Slabo',

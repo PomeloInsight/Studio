@@ -1,3 +1,11 @@
+@import 'src/global/style/consts';
+
 .command-bar {
   margin-bottom: 10px;
+  box-shadow: $ms-depth-shadow-4;
+}
+
+.command-bar-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
