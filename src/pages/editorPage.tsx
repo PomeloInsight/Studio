@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import { initialFabricFonts, initialFabricIcons } from 'src/global/ts/fabric-fonts';
-import { EditorCore } from 'src/components/editorCore';
+import { EditorCore } from 'src/components/editorCore/editorCore';
 
-import css from 'src/pages/editor/style.scss';
+import css from 'src/pages/editorPage.scss';
 
 initialFabricIcons();
 initialFabricFonts();
 
-class Studio extends Component {
+class EditorPage extends Component {
   render() {
     return (
       <div className={css.editor}>
@@ -19,4 +19,4 @@ class Studio extends Component {
   }
 }
 
-render(<Studio />, document.getElementById('app-root'));
+render(<EditorPage />, document.getElementById('app-root'));

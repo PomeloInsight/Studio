@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'inline-source-map',
 
   entry: {
-    editor: resolve('src/pages/editor/index.tsx'),
+    editor: resolve('src/pages/editorPage.tsx'),
   },
 
   resolve: {

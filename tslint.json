@@ -2,12 +2,7 @@
   "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
   "extends": ["tslint-microsoft-contrib/recommended"],
   "rules": {
-    "import-name": [
-      true,
-      null,
-      { "react": "React", "styleScss": "css" }
-    ],
-    "export-name": false,
+    "import-name": false,
     "no-relative-imports": true,
     "no-default-export": true,
     "whitespace": [true, "check-branch", "check-operator", "check-separator"]
