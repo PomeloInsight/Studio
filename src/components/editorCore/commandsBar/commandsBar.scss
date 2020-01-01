@@ -1,7 +1,10 @@
 @import 'src/global/style/consts';
 
 .command-bar {
-  margin-bottom: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
   box-shadow: $ms-depth-shadow-4;
 }
 
