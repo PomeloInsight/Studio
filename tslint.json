@@ -3,6 +3,7 @@
   "extends": ["tslint-microsoft-contrib/recommended"],
   "rules": {
     "import-name": false,
+    "export-name": false,
     "no-relative-imports": true,
     "no-default-export": true,
     "whitespace": [true, "check-branch", "check-operator", "check-separator"]
