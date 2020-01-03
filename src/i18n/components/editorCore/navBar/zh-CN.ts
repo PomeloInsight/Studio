@@ -6,6 +6,7 @@ const zhCN = {
   },
   label: {
     pageName: '点击编辑文档名称',
+    editState: '最后更改于',
   },
 };
 

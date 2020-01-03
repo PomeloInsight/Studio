@@ -2,6 +2,7 @@
 
 .nav-bar {
   display: flex;
+  align-items: center;
   border-bottom: 1px solid $ms-color-gray20;
   max-width: 1400px;
   padding: 0 40px;
@@ -39,4 +40,8 @@
     border: 1px solid $ms-color-blue;
     background-color: transparent;
   }
+}
+
+.editor-state {
+  color: $ms-color-gray120;
 }

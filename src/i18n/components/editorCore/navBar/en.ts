@@ -6,6 +6,7 @@ const en = {
   },
   label: {
     pageName: 'click to edit page name',
+    editState: 'last edited at',
   },
 };
 

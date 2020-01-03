@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Breadcrumb, IBreadcrumbItem, IRenderFunction, TextField } from 'office-ui-fabric-react';
+import { Breadcrumb, IBreadcrumbItem, IRenderFunction, Text, TextField } from 'office-ui-fabric-react';
 
 import { navBarI18n } from 'src/i18n/components/editorCore/navBar';
 
@@ -42,6 +42,9 @@ class NavBar extends Component {
           overflowAriaLabel={navBarI18n.aria.moreLinks}
           onRenderItem={renderBreadcrumbItem}
         />
+        <Text variant='smallPlus' className={css.editorState}>
+          Zhengrenzhe {navBarI18n.label.editState} 11:12
+        </Text>
       </div>
     );
   }
