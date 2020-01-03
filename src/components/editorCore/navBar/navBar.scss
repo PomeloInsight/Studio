@@ -10,3 +10,33 @@
 .breadcrumb {
   margin: 8px 10px;
 }
+
+.breadcrumb-item {
+  color: $ms-color-gray210;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.pageName {
+  margin-left: 10px;
+}
+
+.pageName-input {
+  width: 200px;
+  line-height: 1.8;
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: border 0.05s, background-color 0.05s;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    background-color: $ms-color-gray20;
+  }
+  &:focus {
+    cursor: auto;
+    border: 1px solid $ms-color-blue;
+    background-color: transparent;
+  }
+}
