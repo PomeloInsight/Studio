@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import { Editor, EditorState } from 'draft-js';
 
 import css from 'src/components/editorCore/paper/blocks/block.scss';
 
-class BaseBlock extends Component<IEditorCoreBaseBlockProps, IEditorCoreBaseBlockState> {
-  state = {
-    editorState: this.props.block.initialEditorState,
+class BaseBlock<P, S> extends Component<P, S> {
+  private _onClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    event.stopPropagation();
+    this.onBlockClick(event);
   };
 
-  onChange = (newState: EditorState) => {
-    this.setState({
-      editorState: newState,
-    });
-  };
+  onBlockClick = (_: React.MouseEvent<HTMLDivElement, MouseEvent>) => {};
+
+  content(): JSX.Element | null | undefined {
+    return null;
+  }
 
   render() {
     return (
-      <div className={css.block}>
-        <Editor editorState={this.state.editorState} onChange={this.onChange} />
+      <div className={css.block} onClick={this._onClick} role='document'>
+        {this.content()}
       </div>
     );
   }

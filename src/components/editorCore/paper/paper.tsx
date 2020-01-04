@@ -10,11 +10,17 @@ class Paper extends Component {
     blocks: createInitialBlocks(),
   };
 
+  onClick = () => {
+    console.log('ck');
+  };
+
   render() {
     console.log('render');
     return (
       <div className={css.paper}>
-        <div className={css.content}>{this.state.blocks.map(block => MapBlock(block!))}</div>
+        <div className={css.content} onClick={this.onClick} role='document'>
+          {this.state.blocks.map(block => MapBlock(block!))}
+        </div>
       </div>
     );
   }

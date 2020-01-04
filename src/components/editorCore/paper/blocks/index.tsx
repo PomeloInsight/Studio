@@ -1,14 +1,16 @@
 import React from 'react';
-import { BaseBlock } from 'src/components/editorCore/paper/blocks/baseBlock';
 
-const MapBlock = (block: IEditorCoreBlock) => {
+import { TextBlock } from 'src/components/editorCore/paper/blocks/textBlock';
+import { ImageBlock } from 'src/components/editorCore/paper/blocks/imageBlock';
+
+const MapBlock = (block: IEditorCoreBaseBlock) => {
   switch (block.type) {
     case 'image':
-      return <BaseBlock block={block} key={block.id} />;
+      return <ImageBlock block={block as IEditorCoreImageBlock} key={block.id} />;
     case 'text':
-      return <BaseBlock block={block} key={block.id} />;
+      return <TextBlock block={block as IEditorCoreTextBlock} key={block.id} />;
     default:
-      return undefined;
+      return null;
   }
 };
 
