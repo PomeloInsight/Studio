@@ -6,6 +6,7 @@ import { TextBlock } from 'src/components/editorCore/paper/blocks/textBlock';
 import { ImageBlock } from 'src/components/editorCore/paper/blocks/imageBlock';
 
 const MapBlock = (block: IEditorCoreBaseBlock, refManagement: RefManagement) => {
+  refManagement.appendId(block.id);
   switch (block.type) {
     case 'image':
       return (

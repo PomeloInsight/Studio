@@ -3,6 +3,8 @@ import { Editor, EditorState } from 'draft-js';
 
 import { BaseBlock } from 'src/components/editorCore/paper/blocks/baseBlock';
 
+import css from 'src/components/editorCore/paper/blocks/block.scss';
+
 interface ITextBlockProps {
   block: IEditorCoreTextBlock;
 }
@@ -27,6 +29,7 @@ class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
 
   needFocus() {
     this.editorRef.current?.focus();
+    return true;
   }
 
   canMoveToNeighborhoodBlock(mode: 'prev' | 'next') {
@@ -40,11 +43,11 @@ class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
         ? range.startContainer.parentElement!
         : (range.startContainer as HTMLElement);
 
-    const { offsetTop } = this.blockRef.current!;
+    const { offsetTop, offsetHeight } = this.blockRef.current!;
     const rangeTop = rangeStart.offsetTop - offsetTop;
 
-    console.log(rangeStart.offsetTop, offsetTop);
-
+    if (mode === 'prev') return rangeTop === 0;
+    if (mode === 'next') return rangeTop + rangeStart.offsetHeight === offsetHeight;
     return false;
   }
 
@@ -52,7 +55,7 @@ class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
     const { editorState } = this.state;
 
     return (
-      <div ref={this.blockRef}>
+      <div ref={this.blockRef} className={css.textBlock}>
         <Editor editorState={editorState} onChange={this.onChange} ref={this.editorRef} />
       </div>
     );

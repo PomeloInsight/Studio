@@ -1,4 +1,12 @@
-.baseBlock {
+@import 'src/global/style/consts';
+
+.base-block {
   margin-bottom: 5px;
   outline: 1px dashed salmon;
+}
+
+.text-block {
+  font-size: $ms-font-size-16;
+  line-height: 22px;
+  font-weight: 400;
 }

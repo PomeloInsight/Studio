@@ -18,7 +18,9 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
     this.props.refManagement.dispose(this);
   }
 
-  needFocus() {}
+  needFocus(): boolean {
+    return false;
+  }
 
   private _onClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
@@ -29,12 +31,18 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
 
   private _onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'ArrowUp' && this.canMoveToNeighborhoodBlock('prev')) {
-      console.log('prev');
+      let index = this.props.refManagement.indexStore.indexOf(this.props.id);
+      index = Math.max(index - 1, 0);
+      const targetRef = this.props.refManagement.get(this.props.refManagement.indexStore[index]);
+      targetRef?.needFocus();
       return;
     }
 
     if (event.key === 'ArrowDown' && this.canMoveToNeighborhoodBlock('next')) {
-      console.log('next');
+      let index = this.props.refManagement.indexStore.indexOf(this.props.id);
+      index = Math.min(index + 1, this.props.refManagement.indexStore.length - 1);
+      const targetRef = this.props.refManagement.get(this.props.refManagement.indexStore[index]);
+      targetRef?.needFocus();
       return;
     }
   };
