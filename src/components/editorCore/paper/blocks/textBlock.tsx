@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { Editor, EditorState } from 'draft-js';
 
 import { BaseBlock } from 'src/components/editorCore/paper/blocks/baseBlock';
@@ -12,6 +12,8 @@ interface ITextBlockState {
 }
 
 class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
+  editorRef = createRef<Editor>();
+
   state = {
     editorState: this.props.block.editorState,
   };
@@ -22,12 +24,16 @@ class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
     });
   };
 
+  needFocus() {
+    this.editorRef.current?.focus();
+  }
+
   content() {
     const { editorState } = this.state;
 
     return (
       <div>
-        <Editor editorState={editorState} onChange={this.onChange} />
+        <Editor editorState={editorState} onChange={this.onChange} ref={this.editorRef} />
       </div>
     );
   }

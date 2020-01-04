@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BaseBlock } from 'src/components/editorCore/paper/blocks/baseBlock';
 
 interface IImageBlockProps {

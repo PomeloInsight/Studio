@@ -1,4 +1,6 @@
-.block {
-  border: 1px solid salmon;
+.baseBlock {
   margin-bottom: 5px;
+  &:hover {
+    outline: 1px dashed salmon;
+  }
 }
