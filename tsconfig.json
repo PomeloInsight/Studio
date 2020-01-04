@@ -17,7 +17,7 @@
     "rootDir": ".",
     "baseUrl": ".",
     "types": ["jest"],
-    "typeRoots": ["./typings", "./node_modules/@types"]
+    "typeRoots": ["./typings/**/*.d.ts", "./node_modules/@types"]
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]

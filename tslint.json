@@ -6,6 +6,7 @@
     "export-name": false,
     "no-relative-imports": true,
     "no-default-export": true,
+    "react-this-binding-issue": false,
     "whitespace": [true, "check-branch", "check-operator", "check-separator"]
   }
 }
