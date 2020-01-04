@@ -31,17 +31,13 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
 
   private _onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'ArrowUp' && this.canMoveToNeighborhoodBlock('prev')) {
-      let index = this.props.refManagement.indexStore.indexOf(this.props.id);
-      index = Math.max(index - 1, 0);
-      const targetRef = this.props.refManagement.get(this.props.refManagement.indexStore[index]);
+      const targetRef = this.props.refManagement.getRef(this.props.refManagement.findPrevId(this.props.id) || '');
       targetRef?.needFocus();
       return;
     }
 
     if (event.key === 'ArrowDown' && this.canMoveToNeighborhoodBlock('next')) {
-      let index = this.props.refManagement.indexStore.indexOf(this.props.id);
-      index = Math.min(index + 1, this.props.refManagement.indexStore.length - 1);
-      const targetRef = this.props.refManagement.get(this.props.refManagement.indexStore[index]);
+      const targetRef = this.props.refManagement.getRef(this.props.refManagement.findNextId(this.props.id) || '');
       targetRef?.needFocus();
       return;
     }

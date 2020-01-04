@@ -24,12 +24,12 @@ class Paper extends Component {
     const { offsetTop, offsetLeft } = this.contentRef.current!;
 
     let lastDistance = Number.MAX_SAFE_INTEGER;
-    let targetRef: ReturnType<typeof refManagement.get>;
+    let targetRef: ReturnType<typeof refManagement.getRef>;
 
     for (let i = 0; i < allBlocks.length; i++) {
       const blockEle = allBlocks[i];
       const blockId = blockEle.getAttribute('data-block-id');
-      const blockRef = this.refManagement.get(blockId!);
+      const blockRef = this.refManagement.getRef(blockId!);
       if (!blockRef) continue;
 
       const childLeft = blockEle.offsetLeft - offsetLeft;
