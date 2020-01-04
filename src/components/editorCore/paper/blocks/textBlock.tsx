@@ -12,6 +12,7 @@ interface ITextBlockState {
 }
 
 class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
+  blockRef = createRef<HTMLDivElement>();
   editorRef = createRef<Editor>();
 
   state = {
@@ -28,11 +29,30 @@ class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
     this.editorRef.current?.focus();
   }
 
+  canMoveToNeighborhoodBlock(mode: 'prev' | 'next') {
+    const selection = window.getSelection();
+    if (!selection) return false;
+    if (selection.rangeCount === 0) return false;
+
+    const range = selection.getRangeAt(0);
+    const rangeStart =
+      range.startContainer.nodeType === Node.TEXT_NODE
+        ? range.startContainer.parentElement!
+        : (range.startContainer as HTMLElement);
+
+    const { offsetTop } = this.blockRef.current!;
+    const rangeTop = rangeStart.offsetTop - offsetTop;
+
+    console.log(rangeStart.offsetTop, offsetTop);
+
+    return false;
+  }
+
   content() {
     const { editorState } = this.state;
 
     return (
-      <div>
+      <div ref={this.blockRef}>
         <Editor editorState={editorState} onChange={this.onChange} ref={this.editorRef} />
       </div>
     );

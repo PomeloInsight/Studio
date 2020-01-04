@@ -11,7 +11,7 @@ function createTextBlock(id = uuid(), editorState = EditorState.createEmpty()): 
 }
 
 function createInitialBlocks(): List<IEditorCoreBaseBlock> {
-  return List([createTextBlock()]);
+  return List([createTextBlock(), createTextBlock(), createTextBlock(), createTextBlock(), createTextBlock()]);
 }
 
 export { createInitialBlocks };

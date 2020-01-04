@@ -18,6 +18,8 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
     this.props.refManagement.dispose(this);
   }
 
+  needFocus() {}
+
   private _onClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
     this.onBlockClick(event);
@@ -25,16 +27,36 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
 
   onBlockClick = (_: React.MouseEvent<HTMLDivElement, MouseEvent>) => {};
 
+  private _onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'ArrowUp' && this.canMoveToNeighborhoodBlock('prev')) {
+      console.log('prev');
+      return;
+    }
+
+    if (event.key === 'ArrowDown' && this.canMoveToNeighborhoodBlock('next')) {
+      console.log('next');
+      return;
+    }
+  };
+
+  canMoveToNeighborhoodBlock(mode: 'prev' | 'next') {
+    return true;
+  }
+
   content(): JSX.Element | null | undefined {
     return null;
   }
 
-  needFocus() {}
-
   render() {
     const { id } = this.props;
     return (
-      <div className={css.baseBlock} onClick={this._onClick} role='document' data-block-id={id}>
+      <div
+        className={css.baseBlock}
+        onClick={this._onClick}
+        role='document'
+        data-block-id={id}
+        onKeyDown={this._onKeyDown}
+      >
         {this.content()}
       </div>
     );
