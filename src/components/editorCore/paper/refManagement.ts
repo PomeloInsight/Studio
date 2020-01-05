@@ -1,43 +1,36 @@
 import { BaseBlock } from 'src/components/editorCore/paper/blocks/baseBlock';
+import { Map } from 'immutable';
 
 class RefManagement {
-  private _store = new Map<string, BaseBlock<{}, {}>>();
-  private _indexStore: string[] = [];
+  private refs = Map<string, BaseBlock<{}, {}>>();
 
-  appendId(id: string) {
-    this._indexStore.push(id);
+  // ref 生命周期管理，
+  handleRefLifeCircle(id: string, ref?: BaseBlock<{}, {}>) {
+    if (ref) {
+      this.refs = this.refs.set(id, ref);
+    } else {
+      this.refs = this.refs.remove(id);
+    }
   }
 
-  findNextId(id: string) {
-    const index = this._indexStore.indexOf(id);
-    if (index !== -1) {
-      return this._indexStore[Math.min(index + 1, this._indexStore.length - 1)];
-    }
+  get(id: string) {
+    return this.refs.get(id);
+  }
+
+  private getNeighborhood(id: string, direction: 'up' | 'down') {
+    const ele = document.querySelector(`[data-block-id='${id}']`);
+    const prevEle = direction === 'up' ? ele?.previousElementSibling : ele?.nextElementSibling;
+    const prevId = prevEle?.getAttribute('data-block-id');
+    if (prevId) return this.get(prevId);
     return null;
   }
 
-  findPrevId(id: string) {
-    const index = this._indexStore.indexOf(id);
-    if (index !== -1) {
-      return this._indexStore[Math.max(index - 1, 0)];
-    }
-    return null;
+  getPrev(id: string) {
+    return this.getNeighborhood(id, 'up');
   }
 
-  register(ref: BaseBlock<{}, {}>) {
-    this._store.set(ref.props.id, ref);
-  }
-
-  dispose(ref: BaseBlock<{}, {}>) {
-    this._store.delete(ref.props.id);
-    const index = this._indexStore.findIndex(id => id === ref.props.id);
-    if (index !== -1) {
-      this._indexStore.splice(index, 1);
-    }
-  }
-
-  getRef(id: string) {
-    return this._store.get(id);
+  getNext(id: string) {
+    return this.getNeighborhood(id, 'down');
   }
 }
 

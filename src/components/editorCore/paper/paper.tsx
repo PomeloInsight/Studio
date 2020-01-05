@@ -1,8 +1,8 @@
 import React, { Component, createRef } from 'react';
 
 import { createInitialBlocks } from 'src/components/editorCore/paper/blockDataUtils';
-import { MapBlock } from 'src/components/editorCore/paper/blocks';
 import { RefManagement } from 'src/components/editorCore/paper/refManagement';
+import { blockChoicer } from 'src/components/editorCore/paper/blockChoicer';
 
 import blockCss from 'src/components/editorCore/paper/blocks/block.scss';
 import css from 'src/components/editorCore/paper/paper.scss';
@@ -17,19 +17,19 @@ class Paper extends Component {
   };
 
   onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    // Find the nearest block and focus it
+    // 找到最近的block并focus它
     const { refManagement } = this;
     const { offsetX, offsetY } = e.nativeEvent;
     const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${blockCss.baseBlock}`);
     const { offsetTop, offsetLeft } = this.contentRef.current!;
 
     let lastDistance = Number.MAX_SAFE_INTEGER;
-    let targetRef: ReturnType<typeof refManagement.getRef>;
+    let targetRef: ReturnType<typeof refManagement.get> | null = null;
 
     for (let i = 0; i < allBlocks.length; i++) {
       const blockEle = allBlocks[i];
       const blockId = blockEle.getAttribute('data-block-id');
-      const blockRef = this.refManagement.getRef(blockId!);
+      const blockRef = this.refManagement.get(blockId!);
       if (!blockRef) continue;
 
       const childLeft = blockEle.offsetLeft - offsetLeft;
@@ -55,7 +55,7 @@ class Paper extends Component {
     return (
       <div className={css.paper}>
         <div className={css.content} onClick={this.onClick} role='document' ref={this.contentRef}>
-          {this.state.blocks.map(block => MapBlock(block!, this.refManagement))}
+          {this.state.blocks.map(block => blockChoicer(block!, this.refManagement))}
         </div>
       </div>
     );

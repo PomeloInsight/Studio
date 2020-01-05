@@ -2,7 +2,7 @@ import uuid from 'uuid/v1';
 import { EditorState } from 'draft-js';
 import { List } from 'immutable';
 
-function createTextBlock(id = uuid(), editorState = EditorState.createEmpty()): IEditorCoreTextBlock {
+function createTextBlockData(id = uuid(), editorState = EditorState.createEmpty()): IEditorCoreTextBlock {
   return {
     id,
     type: 'text',
@@ -11,7 +11,13 @@ function createTextBlock(id = uuid(), editorState = EditorState.createEmpty()): 
 }
 
 function createInitialBlocks(): List<IEditorCoreBaseBlock> {
-  return List([createTextBlock(), createTextBlock(), createTextBlock(), createTextBlock(), createTextBlock()]);
+  return List([
+    createTextBlockData(),
+    createTextBlockData(),
+    createTextBlockData(),
+    createTextBlockData(),
+    createTextBlockData(),
+  ]);
 }
 
 export { createInitialBlocks };
