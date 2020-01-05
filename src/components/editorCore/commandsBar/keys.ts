@@ -1,4 +1,4 @@
-const commandKeys = {
+const keys = {
   save: 'save',
   undo: 'undo',
   redo: 'redo',
@@ -52,4 +52,4 @@ const commandKeys = {
   help: 'help',
 };
 
-export { commandKeys };
+export { keys };

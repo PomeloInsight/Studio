@@ -1,8 +1,8 @@
 import React, { Component, createRef } from 'react';
 
-import { createInitialBlocks } from 'src/components/editorCore/paper/blocks/creator';
+import { createInitialBlocks } from 'src/components/editorCore/paper/blockDataUtils';
 import { MapBlock } from 'src/components/editorCore/paper/blocks';
-import { RefManagement } from 'src/components/editorCore/paper/blocks/refManagement';
+import { RefManagement } from 'src/components/editorCore/paper/refManagement';
 
 import blockCss from 'src/components/editorCore/paper/blocks/block.scss';
 import css from 'src/components/editorCore/paper/paper.scss';
@@ -17,7 +17,7 @@ class Paper extends Component {
   };
 
   onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    // find nearest block and focus it
+    // Find the nearest block and focus it
     const { refManagement } = this;
     const { offsetX, offsetY } = e.nativeEvent;
     const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${blockCss.baseBlock}`);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CommandBar } from 'office-ui-fabric-react';
 
-import { left, right } from 'src/components/editorCore/commandsBar/createCommands';
+import { left, right } from 'src/components/editorCore/commandsBar/creator';
 
 import css from 'src/components/editorCore/commandsBar/commandsBar.scss';
 
