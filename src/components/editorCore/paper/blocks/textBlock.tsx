@@ -29,26 +29,15 @@ class TextBlock extends BaseBlock<ITextBlockProps, ITextBlockState> {
 
   needFocus() {
     this.editorRef.current?.focus();
-    return true;
   }
 
   canMoveToNeighborhoodBlock(mode: 'prev' | 'next') {
-    const selection = window.getSelection();
-    if (!selection) return false;
-    if (selection.rangeCount === 0) return false;
-
-    const range = selection.getRangeAt(0);
-    const rangeStart =
-      range.startContainer.nodeType === Node.TEXT_NODE
-        ? range.startContainer.parentElement!
-        : (range.startContainer as HTMLElement);
-
-    const { offsetTop, offsetHeight } = this.blockRef.current!;
-    const rangeTop = rangeStart.offsetTop - offsetTop;
-
-    if (mode === 'prev') return rangeTop === 0;
-    if (mode === 'next') return rangeTop + rangeStart.offsetHeight === offsetHeight;
-    return false;
+    const contentState = this.state.editorState.getCurrentContent();
+    const blocks = contentState.getBlocksAsArray();
+    const selectionState = this.state.editorState.getSelection();
+    if (!selectionState.isCollapsed()) return false;
+    if (mode === 'prev' && blocks[0].getKey() === selectionState.getAnchorKey()) return true;
+    return mode === 'next' && blocks[blocks.length - 1].getKey() === selectionState.getAnchorKey();
   }
 
   content() {

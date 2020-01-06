@@ -10,7 +10,7 @@ interface IBaseBlockProps {
 }
 
 class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
-  // 当组件需要focus时被调用，每个block实例都有不用的focus行为，实例需要继承该方法
+  // 当组件需要focus时被调用，每个block实例都有不同的focus行为，实例需要继承该方法
   needFocus() {}
 
   // block被点击时，其click事件不应该被上层组件捕获，冒泡行为应该在该层停止

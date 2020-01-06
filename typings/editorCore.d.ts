@@ -10,7 +10,7 @@ interface IEditorCoreBaseBlock {
 // text block
 interface IEditorCoreTextBlock extends IEditorCoreBaseBlock {
   type: 'text';
-  editorState: EditorState;
+  editorState: import('draft-js').EditorState;
 }
 
 // image block
