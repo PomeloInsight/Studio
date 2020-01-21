@@ -16,8 +16,8 @@ class Paper extends Component {
     blocks: createInitialBlocks(),
   };
 
+  // 找到最近的block并focus它
   onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    // 找到最近的block并focus它
     const { refManagement } = this;
     const { offsetX, offsetY } = e.nativeEvent;
     const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${blockCss.baseBlock}`);
@@ -51,7 +51,7 @@ class Paper extends Component {
   };
 
   render() {
-    console.log('render');
+    console.log('render paper');
     return (
       <div className={css.paper}>
         <div className={css.content} onClick={this.onClick} role='document' ref={this.contentRef}>
