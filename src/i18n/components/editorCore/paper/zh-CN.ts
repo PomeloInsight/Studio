@@ -1,5 +1,7 @@
 const zhCN = {
-  aria: {},
+  aria: {
+    moreBlockActions: '更多块操作',
+  },
   label: {},
 };
 

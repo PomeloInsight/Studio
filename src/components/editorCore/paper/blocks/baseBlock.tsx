@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Icon } from 'office-ui-fabric-react';
 
+import { paperI18n } from 'src/i18n/components/editorCore/paper';
 import { RefManagement } from 'src/components/editorCore/paper/refManagement';
 
 import css from 'src/components/editorCore/paper/blocks/block.scss';
@@ -57,7 +59,10 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
         data-block-id={id}
         onKeyDown={this._onKeyDown}
       >
-        {this.content()}
+        <div className={css.blockAction}>
+          <Icon iconName='Waffle' ariaLabel={paperI18n.aria.moreBlockActions} className={css.moreAction} />
+        </div>
+        <div className={css.blockContent}>{this.content()}</div>
       </div>
     );
   }

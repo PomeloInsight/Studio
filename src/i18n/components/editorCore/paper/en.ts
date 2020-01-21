@@ -1,5 +1,7 @@
 const en = {
-  aria: {},
+  aria: {
+    moreBlockActions: 'more block actions',
+  },
   label: {},
 };
 
