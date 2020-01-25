@@ -4,18 +4,19 @@
   margin: 0 25px 8px;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  outline: 1px dashed salmon;
 
   .block-action {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 12px;
 
     .more-action {
       color: $ms-color-gray110;
       font-size: 18px;
-      padding: 3px;
+      padding: 2px;
       &:hover {
         background-color: $ms-color-gray30;
         border-radius: 2px;
