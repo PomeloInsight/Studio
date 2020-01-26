@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { Icon } from 'office-ui-fabric-react';
+import React, { Component, FunctionComponent, useState } from 'react';
+import { ContextualMenu, Icon, IContextualMenuItem } from 'office-ui-fabric-react';
+import { useConstCallback } from '@uifabric/react-hooks';
 
 import { paperI18n } from 'src/i18n/components/editorCore/paper';
 import { RefManagement } from 'src/components/editorCore/paper/refManagement';
@@ -11,7 +12,56 @@ interface IBaseBlockProps {
   refManagement: RefManagement;
 }
 
+const MoreAction: FunctionComponent = () => {
+  const actionRef = React.useRef(null);
+  const [showContextualMenu, setShowContextualMenu] = useState(false);
+  const onShowContextualMenu = useConstCallback(() => setShowContextualMenu(true));
+  const onHideContextualMenu = useConstCallback(() => setShowContextualMenu(false));
+
+  const contextMenuItems: IContextualMenuItem[] = [
+    {
+      key: 'delete',
+      ariaLabel: paperI18n.aria.deleteBlock,
+      text: paperI18n.label.delete,
+    },
+    {
+      key: 'duplicate',
+      ariaLabel: paperI18n.aria.duplicateBlock,
+      text: paperI18n.label.duplicate,
+    },
+    {
+      key: 'comment',
+      ariaLabel: paperI18n.aria.commentBlock,
+      text: paperI18n.label.comment,
+    },
+    {
+      key: 'convertTo',
+      ariaLabel: paperI18n.aria.convertTo,
+      text: paperI18n.label.convertTo,
+    },
+  ];
+
+  return (
+    <div className={css.blockAction} ref={actionRef}>
+      <Icon
+        iconName='Waffle'
+        ariaLabel={paperI18n.aria.moreBlockActions}
+        className={css.moreAction}
+        onClick={onShowContextualMenu}
+      />
+      <ContextualMenu
+        items={contextMenuItems}
+        target={actionRef}
+        hidden={!showContextualMenu}
+        onItemClick={onHideContextualMenu}
+        onDismiss={onHideContextualMenu}
+      />
+    </div>
+  );
+};
+
 class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
+  // 组件的focus行为
   // 当组件需要focus时被调用，每个block实例都有不同的focus行为，实例需要继承该方法
   needFocus() {}
 
@@ -59,9 +109,7 @@ class BaseBlock<P, S> extends Component<P & IBaseBlockProps, S> {
         data-block-id={id}
         onKeyDown={this._onKeyDown}
       >
-        <div className={css.blockAction}>
-          <Icon iconName='Waffle' ariaLabel={paperI18n.aria.moreBlockActions} className={css.moreAction} />
-        </div>
+        <MoreAction />
         <div className={css.blockContent}>{this.content()}</div>
       </div>
     );

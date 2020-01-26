@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@uifabric/react-hooks": "^7.0.3",
     "draft-js": "^0.11.3",
     "immutable": "~3.7.4",
     "js-cookie": "^2.2.1",
