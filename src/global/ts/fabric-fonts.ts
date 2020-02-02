@@ -1,4 +1,4 @@
-import { registerDefaultFontFaces, registerIcons } from '@uifabric/styling';
+import { registerDefaultFontFaces, registerIcons } from 'office-ui-fabric-react';
 import * as fabricIconsMap from 'src/global/ts/fabric-icons.json';
 
 const icons: { [key: string]: string } = {};
