@@ -9,7 +9,6 @@ dependencies:
   uuid: 3.4.0
 devDependencies:
   '@types/draft-js': 0.10.38
-  '@types/immutable': 3.8.7
   '@types/jest': 24.9.1
   '@types/js-cookie': 2.2.4
   '@types/react': 16.9.19
@@ -30,7 +29,7 @@ devDependencies:
   style-loader: 1.1.3_webpack@4.41.5
   stylelint: 13.0.0
   stylelint-config-recommended: 3.0.0_stylelint@13.0.0
-  ts-jest: 24.3.0_jest@25.1.0
+  ts-jest: 25.1.0_jest@25.1.0
   ts-loader: 6.2.1_typescript@3.7.5
   tslint: 6.0.0_typescript@3.7.5
   tslint-microsoft-contrib: 6.2.0_tslint@6.0.0+typescript@3.7.5
@@ -38,7 +37,7 @@ devDependencies:
   url-loader: 3.0.0_file-loader@5.0.2+webpack@4.41.5
   webpack: 4.41.5_webpack@4.41.5
   webpack-cli: 3.3.10_webpack@4.41.5
-  webpack-dev-server: 3.10.2_webpack@4.41.5
+  webpack-dev-server: 3.10.2_02f068594a87170f90c9165a6718c67c
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.8.3:
@@ -48,14 +47,14 @@ packages:
     resolution:
       integrity: sha1-M+JZA9dIEYFTThLsCiXxa2/PQZ4=
       tarball: '@babel/code-frame/download/@babel/code-frame-7.8.3.tgz'
-  /@babel/core/7.8.3:
+  /@babel/core/7.8.4:
     dependencies:
       '@babel/code-frame': 7.8.3
-      '@babel/generator': 7.8.3
-      '@babel/helpers': 7.8.3
-      '@babel/parser': 7.8.3
+      '@babel/generator': 7.8.4
+      '@babel/helpers': 7.8.4
+      '@babel/parser': 7.8.4
       '@babel/template': 7.8.3
-      '@babel/traverse': 7.8.3
+      '@babel/traverse': 7.8.4
       '@babel/types': 7.8.3
       convert-source-map: 1.7.0
       debug: 4.1.1
@@ -69,9 +68,9 @@ packages:
     engines:
       node: '>=6.9.0'
     resolution:
-      integrity: sha1-MLDrtN0Vhd5pI6C00XngufXYKUE=
-      tarball: '@babel/core/download/@babel/core-7.8.3.tgz'
-  /@babel/generator/7.8.3:
+      integrity: sha1-1JZ5nlwSGVs2AtD93XcpTj446A4=
+      tarball: '@babel/core/download/@babel/core-7.8.4.tgz'
+  /@babel/generator/7.8.4:
     dependencies:
       '@babel/types': 7.8.3
       jsesc: 2.5.2
@@ -79,8 +78,8 @@ packages:
       source-map: 0.5.7
     dev: true
     resolution:
-      integrity: sha1-DiLABbCpTBx06v4Z73jOU6TUXAM=
-      tarball: '@babel/generator/download/@babel/generator-7.8.3.tgz'
+      integrity: sha1-NbvHRIaVb+QlGCn59sSDMOjQmF4=
+      tarball: '@babel/generator/download/@babel/generator-7.8.4.tgz'
   /@babel/helper-function-name/7.8.3:
     dependencies:
       '@babel/helper-get-function-arity': 7.8.3
@@ -109,15 +108,15 @@ packages:
     resolution:
       integrity: sha1-ManzAHD5E2inGCzwX4MXgQZfx6k=
       tarball: '@babel/helper-split-export-declaration/download/@babel/helper-split-export-declaration-7.8.3.tgz'
-  /@babel/helpers/7.8.3:
+  /@babel/helpers/7.8.4:
     dependencies:
       '@babel/template': 7.8.3
-      '@babel/traverse': 7.8.3
+      '@babel/traverse': 7.8.4
       '@babel/types': 7.8.3
     dev: true
     resolution:
-      integrity: sha1-OC+7A4LOfEzpBZRauWQdaIM2zoU=
-      tarball: '@babel/helpers/download/@babel/helpers-7.8.3.tgz'
+      integrity: sha1-dU6z7nJ8Fl4KJA1sIH3nxFXzb3M=
+      tarball: '@babel/helpers/download/@babel/helpers-7.8.4.tgz'
   /@babel/highlight/7.8.3:
     dependencies:
       chalk: 2.4.2
@@ -127,17 +126,17 @@ packages:
     resolution:
       integrity: sha1-KPFz0EIj6qpZvB1Dmjg25tEmV5c=
       tarball: '@babel/highlight/download/@babel/highlight-7.8.3.tgz'
-  /@babel/parser/7.8.3:
+  /@babel/parser/7.8.4:
     dev: true
     engines:
       node: '>=6.0.0'
     hasBin: true
     resolution:
-      integrity: sha1-eQh0CR0gAcm+bsQmwu7Ue8dnkIE=
-      tarball: '@babel/parser/download/@babel/parser-7.8.3.tgz?cache=0&sync_timestamp=1580472765359&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fparser%2Fdownload%2F%40babel%2Fparser-7.8.3.tgz'
-  /@babel/plugin-syntax-bigint/7.8.3_@babel+core@7.8.3:
+      integrity: sha1-0dvmRpHWA1ipdClfpT2gdN0s6Og=
+      tarball: '@babel/parser/download/@babel/parser-7.8.4.tgz?cache=0&sync_timestamp=1580472765359&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fparser%2Fdownload%2F%40babel%2Fparser-7.8.4.tgz'
+  /@babel/plugin-syntax-bigint/7.8.3_@babel+core@7.8.4:
     dependencies:
-      '@babel/core': 7.8.3
+      '@babel/core': 7.8.4
       '@babel/helper-plugin-utils': 7.8.3
     dev: true
     peerDependencies:
@@ -145,9 +144,9 @@ packages:
     resolution:
       integrity: sha1-TJpvZp9dDN8bkKFnHpoUa+UwDOo=
       tarball: '@babel/plugin-syntax-bigint/download/@babel/plugin-syntax-bigint-7.8.3.tgz'
-  /@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.8.3:
+  /@babel/plugin-syntax-object-rest-spread/7.8.3_@babel+core@7.8.4:
     dependencies:
-      '@babel/core': 7.8.3
+      '@babel/core': 7.8.4
       '@babel/helper-plugin-utils': 7.8.3
     dev: true
     peerDependencies:
@@ -155,37 +154,37 @@ packages:
     resolution:
       integrity: sha1-YOIl7cvZimQDMqLnLdPmbxr1WHE=
       tarball: '@babel/plugin-syntax-object-rest-spread/download/@babel/plugin-syntax-object-rest-spread-7.8.3.tgz'
-  /@babel/runtime/7.8.3:
+  /@babel/runtime/7.8.4:
     dependencies:
       regenerator-runtime: 0.13.3
     dev: true
     resolution:
-      integrity: sha1-CBGUT3OmySa7KtNekY3MG/qyefE=
-      tarball: '@babel/runtime/download/@babel/runtime-7.8.3.tgz'
+      integrity: sha1-159aIED3yqJNU+VjqtScvAVYEwg=
+      tarball: '@babel/runtime/download/@babel/runtime-7.8.4.tgz'
   /@babel/template/7.8.3:
     dependencies:
       '@babel/code-frame': 7.8.3
-      '@babel/parser': 7.8.3
+      '@babel/parser': 7.8.4
       '@babel/types': 7.8.3
     dev: true
     resolution:
       integrity: sha1-4CrQT+JipleAkyf1eAVsoV/U0bg=
       tarball: '@babel/template/download/@babel/template-7.8.3.tgz'
-  /@babel/traverse/7.8.3:
+  /@babel/traverse/7.8.4:
     dependencies:
       '@babel/code-frame': 7.8.3
-      '@babel/generator': 7.8.3
+      '@babel/generator': 7.8.4
       '@babel/helper-function-name': 7.8.3
       '@babel/helper-split-export-declaration': 7.8.3
-      '@babel/parser': 7.8.3
+      '@babel/parser': 7.8.4
       '@babel/types': 7.8.3
       debug: 4.1.1
       globals: 11.12.0
       lodash: 4.17.15
     dev: true
     resolution:
-      integrity: sha1-qCYhWwEcm09z86iTr7wFFRNYv5o=
-      tarball: '@babel/traverse/download/@babel/traverse-7.8.3.tgz'
+      integrity: sha1-8IRYIjZfnVsOMS7TlZ0/gn+Gnjw=
+      tarball: '@babel/traverse/download/@babel/traverse-7.8.4.tgz'
   /@babel/types/7.8.3:
     dependencies:
       esutils: 2.0.3
@@ -375,7 +374,7 @@ packages:
       tarball: '@jest/test-sequencer/download/@jest/test-sequencer-25.1.0.tgz'
   /@jest/transform/25.1.0:
     dependencies:
-      '@babel/core': 7.8.3
+      '@babel/core': 7.8.4
       '@jest/types': 25.1.0
       babel-plugin-istanbul: 6.0.0
       chalk: 3.0.0
@@ -401,7 +400,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.1
       '@types/istanbul-reports': 1.1.1
-      '@types/yargs': 13.0.6
+      '@types/yargs': 13.0.8
     dev: true
     engines:
       node: '>= 6'
@@ -420,11 +419,11 @@ packages:
     resolution:
       integrity: sha1-smgxkW8NfDgeEdu14QOnKu0bQ5U=
       tarball: '@jest/types/download/@jest/types-25.1.0.tgz'
-  /@microsoft/load-themed-styles/1.10.36:
+  /@microsoft/load-themed-styles/1.10.37:
     dev: false
     resolution:
-      integrity: sha1-qgh/EJTR9Cs2coePXEGAZCFHgRU=
-      tarball: '@microsoft/load-themed-styles/download/@microsoft/load-themed-styles-1.10.36.tgz'
+      integrity: sha1-HMrAC3sTRIqipc/bwDuqBCL0Idk=
+      tarball: '@microsoft/load-themed-styles/download/@microsoft/load-themed-styles-1.10.37.tgz'
   /@nodelib/fs.scandir/2.1.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.3
@@ -466,7 +465,7 @@ packages:
       tarball: '@types/babel-types/download/@types/babel-types-7.0.7.tgz'
   /@types/babel__core/7.1.3:
     dependencies:
-      '@babel/parser': 7.8.3
+      '@babel/parser': 7.8.4
       '@babel/types': 7.8.3
       '@types/babel__generator': 7.6.1
       '@types/babel__template': 7.0.2
@@ -484,7 +483,7 @@ packages:
       tarball: '@types/babel__generator/download/@types/babel__generator-7.6.1.tgz'
   /@types/babel__template/7.0.2:
     dependencies:
-      '@babel/parser': 7.8.3
+      '@babel/parser': 7.8.4
       '@babel/types': 7.8.3
     dev: true
     resolution:
@@ -503,7 +502,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-HFZB22nrjN83jt0ltL53VL7rSLQ=
-      tarball: '@types/babylon/download/@types/babylon-6.16.5.tgz?cache=0&sync_timestamp=1580134600586&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fbabylon%2Fdownload%2F%40types%2Fbabylon-6.16.5.tgz'
+      tarball: '@types/babylon/download/@types/babylon-6.16.5.tgz'
   /@types/color-name/1.1.1:
     dev: true
     resolution:
@@ -526,19 +525,11 @@ packages:
     dependencies:
       '@types/events': 3.0.0
       '@types/minimatch': 3.0.3
-      '@types/node': 13.5.0
+      '@types/node': 13.7.0
     dev: true
     resolution:
       integrity: sha1-qlmhxuP7xCHgfM0xqUTDDrpSFXU=
       tarball: '@types/glob/download/@types/glob-7.1.1.tgz'
-  /@types/immutable/3.8.7:
-    dependencies:
-      immutable: 3.7.6
-    deprecated: 'This is a stub types definition for Facebook''s Immutable (https://github.com/facebook/immutable-js). Facebook''s Immutable provides its own type definitions, so you don''t need @types/immutable installed!'
-    dev: true
-    resolution:
-      integrity: sha1-U20z0w8/PZptRkKiGUGf2Cr2M/s=
-      tarball: '@types/immutable/download/@types/immutable-3.8.7.tgz'
   /@types/istanbul-lib-coverage/2.0.1:
     dev: true
     resolution:
@@ -581,11 +572,11 @@ packages:
     resolution:
       integrity: sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
       tarball: '@types/minimist/download/@types/minimist-1.2.0.tgz'
-  /@types/node/13.5.0:
+  /@types/node/13.7.0:
     dev: true
     resolution:
-      integrity: sha1-TkmNvzVXlaYRqHrl74EahmDUJmI=
-      tarball: '@types/node/download/@types/node-13.5.0.tgz'
+      integrity: sha1-tBfe2hjPhADyeHM0ma1VR+0avsQ=
+      tarball: '@types/node/download/@types/node-13.7.0.tgz'
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -638,7 +629,7 @@ packages:
       tarball: '@types/vfile-message/download/@types/vfile-message-2.0.0.tgz'
   /@types/vfile/3.0.2:
     dependencies:
-      '@types/node': 13.5.0
+      '@types/node': 13.7.0
       '@types/unist': 2.0.3
       '@types/vfile-message': 2.0.0
     dev: true
@@ -650,13 +641,13 @@ packages:
     resolution:
       integrity: sha1-yz+fdBhp4gzOMw/765JxWQSDiC0=
       tarball: '@types/yargs-parser/download/@types/yargs-parser-15.0.0.tgz'
-  /@types/yargs/13.0.6:
+  /@types/yargs/13.0.8:
     dependencies:
       '@types/yargs-parser': 15.0.0
     dev: true
     resolution:
-      integrity: sha1-au2ROpLCYsE7lNS8qAQyN94gISQ=
-      tarball: '@types/yargs/download/@types/yargs-13.0.6.tgz'
+      integrity: sha1-o4wi3vLxwgaPiXGss+pzTrPGSpk=
+      tarball: '@types/yargs/download/@types/yargs-13.0.8.tgz'
   /@types/yargs/15.0.3:
     dependencies:
       '@types/yargs-parser': 15.0.0
@@ -733,7 +724,7 @@ packages:
       tarball: '@uifabric/set-version/download/@uifabric/set-version-7.0.4.tgz'
   /@uifabric/styling/7.10.4_d71b093c50ccd2d1ce7237dd3ca2d81b:
     dependencies:
-      '@microsoft/load-themed-styles': 1.10.36
+      '@microsoft/load-themed-styles': 1.10.37
       '@uifabric/merge-styles': 7.8.5
       '@uifabric/set-version': 7.0.4
       '@uifabric/utilities': 7.11.5_d71b093c50ccd2d1ce7237dd3ca2d81b
@@ -1324,7 +1315,7 @@ packages:
       tarball: atob/download/atob-2.1.2.tgz
   /autoprefixer/9.7.4:
     dependencies:
-      browserslist: 4.8.5
+      browserslist: 4.8.6
       caniuse-lite: 1.0.30001023
       chalk: 2.4.2
       normalize-range: 0.1.2
@@ -1348,14 +1339,14 @@ packages:
     resolution:
       integrity: sha1-fjPY99RJs/ZzzXLeuavcVS2+Uo4=
       tarball: aws4/download/aws4-1.9.1.tgz
-  /babel-jest/25.1.0_@babel+core@7.8.3:
+  /babel-jest/25.1.0_@babel+core@7.8.4:
     dependencies:
-      '@babel/core': 7.8.3
+      '@babel/core': 7.8.4
       '@jest/transform': 25.1.0
       '@jest/types': 25.1.0
       '@types/babel__core': 7.1.3
       babel-plugin-istanbul: 6.0.0
-      babel-preset-jest: 25.1.0_@babel+core@7.8.3
+      babel-preset-jest: 25.1.0_@babel+core@7.8.4
       chalk: 3.0.0
       slash: 3.0.0
     dev: true
@@ -1388,11 +1379,11 @@ packages:
     resolution:
       integrity: sha1-+2LXs7U+s2yX0bx/7CBy+b0RWYE=
       tarball: babel-plugin-jest-hoist/download/babel-plugin-jest-hoist-25.1.0.tgz
-  /babel-preset-jest/25.1.0_@babel+core@7.8.3:
+  /babel-preset-jest/25.1.0_@babel+core@7.8.4:
     dependencies:
-      '@babel/core': 7.8.3
-      '@babel/plugin-syntax-bigint': 7.8.3_@babel+core@7.8.3
-      '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.8.3
+      '@babel/core': 7.8.4
+      '@babel/plugin-syntax-bigint': 7.8.3_@babel+core@7.8.4
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3_@babel+core@7.8.4
       babel-plugin-jest-hoist: 25.1.0
     dev: true
     engines:
@@ -1653,21 +1644,21 @@ packages:
       tarball: browserify-sign/download/browserify-sign-4.0.4.tgz
   /browserify-zlib/0.2.0:
     dependencies:
-      pako: 1.0.10
+      pako: 1.0.11
     dev: true
     resolution:
       integrity: sha1-KGlFnZqjviRf6P4sofRuLn9U1z8=
       tarball: browserify-zlib/download/browserify-zlib-0.2.0.tgz
-  /browserslist/4.8.5:
+  /browserslist/4.8.6:
     dependencies:
       caniuse-lite: 1.0.30001023
-      electron-to-chromium: 1.3.340
+      electron-to-chromium: 1.3.344
       node-releases: 1.1.47
     dev: true
     hasBin: true
     resolution:
-      integrity: sha1-aRr04yesh3sl56P37oacTvNs3qM=
-      tarball: browserslist/download/browserslist-4.8.5.tgz
+      integrity: sha1-lkBvP18HVdJy4npm9BY8qCFZCn4=
+      tarball: browserslist/download/browserslist-4.8.6.tgz
   /bs-logger/0.2.6:
     dependencies:
       fast-json-stable-stringify: 2.1.0
@@ -2021,15 +2012,15 @@ packages:
     resolution:
       integrity: sha1-+TNprouafOAv1B+q0MqDAzGQxGM=
       tarball: class-utils/download/class-utils-0.3.6.tgz
-  /clean-css/4.2.2:
+  /clean-css/4.2.3:
     dependencies:
       source-map: 0.6.1
     dev: true
     engines:
       node: '>= 4.0'
     resolution:
-      integrity: sha1-hRmr2nJLPnWbx50ZY2mQaSXYGj8=
-      tarball: clean-css/download/clean-css-4.2.2.tgz
+      integrity: sha1-UHtd59l7SO5T2ErbAWD/YhY4D3g=
+      tarball: clean-css/download/clean-css-4.2.3.tgz
   /cliui/2.1.0:
     dependencies:
       center-align: 0.1.3
@@ -2478,7 +2469,7 @@ packages:
       webpack: ^4.0.0 || ^5.0.0
     resolution:
       integrity: sha1-0/2zNYtD8jO3hQHF7XscbaYTMgI=
-      tarball: css-loader/download/css-loader-3.4.2.tgz?cache=0&sync_timestamp=1578735757434&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-loader%2Fdownload%2Fcss-loader-3.4.2.tgz
+      tarball: css-loader/download/css-loader-3.4.2.tgz
   /css-select/1.2.0:
     dependencies:
       boolbase: 1.0.0
@@ -2914,11 +2905,11 @@ packages:
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
       tarball: ee-first/download/ee-first-1.1.1.tgz
-  /electron-to-chromium/1.3.340:
+  /electron-to-chromium/1.3.344:
     dev: true
     resolution:
-      integrity: sha1-XU/njphNQhEZTPWlLggGlUPaFG8=
-      tarball: electron-to-chromium/download/electron-to-chromium-1.3.340.tgz
+      integrity: sha1-8Tl6Yzw15yZzDCS+EITNJcPugUg=
+      tarball: electron-to-chromium/download/electron-to-chromium-1.3.344.tgz
   /elliptic/6.5.2:
     dependencies:
       bn.js: 4.11.8
@@ -4106,7 +4097,7 @@ packages:
   /html-minifier/3.5.21:
     dependencies:
       camel-case: 3.0.0
-      clean-css: 4.2.2
+      clean-css: 4.2.3
       commander: 2.17.1
       he: 1.2.0
       param-case: 2.1.1
@@ -4929,10 +4920,10 @@ packages:
       tarball: istanbul-lib-coverage/download/istanbul-lib-coverage-3.0.0.tgz
   /istanbul-lib-instrument/4.0.0:
     dependencies:
-      '@babel/core': 7.8.3
-      '@babel/parser': 7.8.3
+      '@babel/core': 7.8.4
+      '@babel/parser': 7.8.4
       '@babel/template': 7.8.3
-      '@babel/traverse': 7.8.3
+      '@babel/traverse': 7.8.4
       '@istanbuljs/schema': 0.1.2
       istanbul-lib-coverage: 3.0.0
       semver: 6.3.0
@@ -5009,10 +5000,10 @@ packages:
       tarball: jest-cli/download/jest-cli-25.1.0.tgz
   /jest-config/25.1.0:
     dependencies:
-      '@babel/core': 7.8.3
+      '@babel/core': 7.8.4
       '@jest/test-sequencer': 25.1.0
       '@jest/types': 25.1.0
-      babel-jest: 25.1.0_@babel+core@7.8.3
+      babel-jest: 25.1.0_@babel+core@7.8.4
       chalk: 3.0.0
       glob: 7.1.6
       jest-environment-jsdom: 25.1.0
@@ -5141,7 +5132,7 @@ packages:
       tarball: jest-haste-map/download/jest-haste-map-25.1.0.tgz
   /jest-jasmine2/25.1.0:
     dependencies:
-      '@babel/traverse': 7.8.3
+      '@babel/traverse': 7.8.4
       '@jest/environment': 25.1.0
       '@jest/source-map': 25.1.0
       '@jest/test-result': 25.1.0
@@ -6575,7 +6566,7 @@ packages:
       tarball: obuf/download/obuf-1.1.2.tgz
   /office-ui-fabric-react/7.88.0_d71b093c50ccd2d1ce7237dd3ca2d81b:
     dependencies:
-      '@microsoft/load-themed-styles': 1.10.36
+      '@microsoft/load-themed-styles': 1.10.37
       '@types/react': 16.9.19
       '@types/react-dom': 16.9.5
       '@uifabric/foundation': 7.5.5_d71b093c50ccd2d1ce7237dd3ca2d81b
@@ -6792,11 +6783,11 @@ packages:
     resolution:
       integrity: sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=
       tarball: p-try/download/p-try-2.2.0.tgz
-  /pako/1.0.10:
+  /pako/1.0.11:
     dev: true
     resolution:
-      integrity: sha1-Qyi621CGpCaqkPVBl31JVdpclzI=
-      tarball: pako/download/pako-1.0.10.tgz
+      integrity: sha1-bJWZ00DVTf05RjgCUqNXBaa5kr8=
+      tarball: pako/download/pako-1.0.11.tgz
   /parallel-transform/1.2.0:
     dependencies:
       cyclist: 1.0.1
@@ -7125,7 +7116,7 @@ packages:
       tarball: postcss-html/download/postcss-html-0.36.0.tgz
   /postcss-jsx/0.36.4_d1f6a8d7ba09f07c09d5d416431bd0fd:
     dependencies:
-      '@babel/core': 7.8.3
+      '@babel/core': 7.8.4
       postcss: 7.0.26
       postcss-syntax: 0.36.2_postcss@7.0.26
     dev: true
@@ -7401,7 +7392,7 @@ packages:
     dev: false
     resolution:
       integrity: sha1-UsQedbjIfnK52TYOAga5ncv/psU=
-      tarball: prop-types/download/prop-types-15.7.2.tgz
+      tarball: prop-types/download/prop-types-15.7.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprop-types%2Fdownload%2Fprop-types-15.7.2.tgz
   /proxy-addr/2.0.5:
     dependencies:
       forwarded: 0.1.2
@@ -7469,7 +7460,7 @@ packages:
       tarball: pug-error/download/pug-error-1.3.3.tgz
   /pug-filters/3.1.1:
     dependencies:
-      clean-css: 4.2.2
+      clean-css: 4.2.3
       constantinople: 3.1.2
       jstransformer: 1.0.0
       pug-error: 1.3.3
@@ -8269,7 +8260,7 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha1-C3mpMgTXtgDUsoUNH2bCo0lRx3A=
-      tarball: schema-utils/download/schema-utils-1.0.0.tgz
+      tarball: schema-utils/download/schema-utils-1.0.0.tgz?cache=0&sync_timestamp=1579263560823&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fschema-utils%2Fdownload%2Fschema-utils-1.0.0.tgz
   /schema-utils/2.6.4:
     dependencies:
       ajv: 6.11.0
@@ -8279,7 +8270,7 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha1-on779uTnhonZGHLuPM+lfXvdD1M=
-      tarball: schema-utils/download/schema-utils-2.6.4.tgz
+      tarball: schema-utils/download/schema-utils-2.6.4.tgz?cache=0&sync_timestamp=1579263560823&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fschema-utils%2Fdownload%2Fschema-utils-2.6.4.tgz
   /scss-tokenizer/0.2.3:
     dependencies:
       js-base64: 2.5.1
@@ -9375,7 +9366,7 @@ packages:
     resolution:
       integrity: sha1-+BO1qMhrQNpZYGcisUTjIleZ9H0=
       tarball: true-case-path/download/true-case-path-1.0.3.tgz
-  /ts-jest/24.3.0_jest@25.1.0:
+  /ts-jest/25.1.0_jest@25.1.0:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -9393,10 +9384,10 @@ packages:
       node: '>= 6'
     hasBin: true
     peerDependencies:
-      jest: '>=24 <25'
+      jest: '>=25 <26'
     resolution:
-      integrity: sha1-uXgU4+qzWeqEChrBEt6uaKpECGk=
-      tarball: ts-jest/download/ts-jest-24.3.0.tgz
+      integrity: sha1-Bud2xMzopNqO7ElF82pYI9DA+bo=
+      tarball: ts-jest/download/ts-jest-25.1.0.tgz
   /ts-loader/6.2.1_typescript@3.7.5:
     dependencies:
       chalk: 2.4.2
@@ -9994,7 +9985,7 @@ packages:
     resolution:
       integrity: sha1-ABnD23FuP6XOy/ZPKriKdLqzMfM=
       tarball: webpack-dev-middleware/download/webpack-dev-middleware-3.7.2.tgz
-  /webpack-dev-server/3.10.2_webpack@4.41.5:
+  /webpack-dev-server/3.10.2_02f068594a87170f90c9165a6718c67c:
     dependencies:
       ansi-html: 0.0.7
       bonjour: 3.5.0
@@ -10026,6 +10017,7 @@ packages:
       supports-color: 6.1.0
       url: 0.11.0
       webpack: 4.41.5_webpack@4.41.5
+      webpack-cli: 3.3.10_webpack@4.41.5
       webpack-dev-middleware: 3.7.2_webpack@4.41.5
       webpack-log: 2.0.0
       ws: 6.2.1
@@ -10036,6 +10028,10 @@ packages:
     hasBin: true
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack-cli:
+        optional: true
     resolution:
       integrity: sha1-NAMofWdMdAeqttmz9yJZ7NCqCHQ=
       tarball: webpack-dev-server/download/webpack-dev-server-3.10.2.tgz
@@ -10120,7 +10116,7 @@ packages:
     dev: false
     resolution:
       integrity: sha1-/IBORYzEYACbGiuWa8iBfSV4rvs=
-      tarball: whatwg-fetch/download/whatwg-fetch-3.0.0.tgz
+      tarball: whatwg-fetch/download/whatwg-fetch-3.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwhatwg-fetch%2Fdownload%2Fwhatwg-fetch-3.0.0.tgz
   /whatwg-mimetype/2.3.0:
     dev: true
     resolution:
@@ -10323,7 +10319,7 @@ packages:
       tarball: yallist/download/yallist-3.1.1.tgz
   /yaml/1.7.2:
     dependencies:
-      '@babel/runtime': 7.8.3
+      '@babel/runtime': 7.8.4
     dev: true
     engines:
       node: '>= 6'
@@ -10453,7 +10449,6 @@ packages:
       tarball: yargs/download/yargs-7.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fyargs%2Fdownload%2Fyargs-7.1.0.tgz
 specifiers:
   '@types/draft-js': ^0.10.38
-  '@types/immutable': ^3.8.7
   '@types/jest': ^24.9.1
   '@types/js-cookie': ^2.2.4
   '@types/react': ^16.9.19
@@ -10481,7 +10476,7 @@ specifiers:
   style-loader: ^1.1.3
   stylelint: ^13.0.0
   stylelint-config-recommended: ^3.0.0
-  ts-jest: ^24.3.0
+  ts-jest: ^25.1.0
   ts-loader: ^6.2.1
   tslint: ^6.0.0
   tslint-microsoft-contrib: ^6.2.0
