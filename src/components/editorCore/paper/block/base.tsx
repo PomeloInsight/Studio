@@ -4,10 +4,13 @@ import { RefManagement } from 'src/components/editorCore/paper/refManagement';
 
 import css from 'src/components/editorCore/paper/block/block.scss';
 
+
 interface IBaseBlockProps {
   id: string;
+
   refManagement: RefManagement;
 }
+
 
 class Base<P, S> extends Component<P & IBaseBlockProps, S> {
   /**
@@ -55,21 +58,23 @@ class Base<P, S> extends Component<P & IBaseBlockProps, S> {
     this.canFocusNear(direction) && ref?.focus();
   };
 
+
   render() {
     const { id } = this.props;
 
     return (
       <div
-        className={css.block}
+        className={ css.block }
         role='document'
-        data-block-id={id}
-        onClick={this.onBlockClick}
-        onKeyDown={this.onBlockKeyDown}
+        data-block-id={ id }
+        onClick={ this.onBlockClick }
+        onKeyDown={ this.onBlockKeyDown }
       >
-        <div className={css.blockContent}>{this.paint()}</div>
+        <div className={ css.blockContent }>{ this.paint() }</div>
       </div>
     );
   }
 }
+
 
 export { Base };
