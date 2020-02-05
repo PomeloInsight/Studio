@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'inline-source-map',
 
   entry: {
-    editor: resolve('src/pages/editorPage.tsx'),
+    editorBundle: resolve('src/pages/editorPage.tsx'),
   },
 
   resolve: {
@@ -77,8 +77,9 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: resolve('src/templates/index.pug'),
+      filename: 'editor.html',
+      template: resolve('src/templates/editor.pug'),
+      chunks: ['editorBundle'],
     }),
     new CopyPlugin([
       {
