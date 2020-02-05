@@ -2,9 +2,9 @@ import React, { Component, createRef } from 'react';
 
 import { createInitialBlocks } from 'src/components/editorCore/paper/blockDataUtils';
 import { RefManagement } from 'src/components/editorCore/paper/refManagement';
-import { blockChoicer } from 'src/components/editorCore/paper/blockChoicer';
+import { blockMap } from 'src/components/editorCore/paper/blockMap';
 
-import blockCss from 'src/components/editorCore/paper/blocks/block.scss';
+import blockCss from 'src/components/editorCore/paper/block/block.scss';
 import css from 'src/components/editorCore/paper/paper.scss';
 
 class Paper extends Component {
@@ -20,7 +20,7 @@ class Paper extends Component {
   onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const { refManagement } = this;
     const { offsetX, offsetY } = e.nativeEvent;
-    const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${blockCss.baseBlock}`);
+    const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${blockCss.block}`);
     const { offsetTop, offsetLeft } = this.contentRef.current!;
 
     let lastDistance = Number.MAX_SAFE_INTEGER;
@@ -47,7 +47,7 @@ class Paper extends Component {
       }
     }
 
-    targetRef?.needFocus();
+    targetRef?.focus();
   };
 
   render() {
@@ -55,7 +55,7 @@ class Paper extends Component {
     return (
       <div className={css.paper}>
         <div className={css.content} onClick={this.onClick} role='document' ref={this.contentRef}>
-          {this.state.blocks.map(block => blockChoicer(block!, this.refManagement))}
+          {this.state.blocks.map(block => blockMap(block!, this.refManagement))}
         </div>
       </div>
     );

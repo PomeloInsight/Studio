@@ -1,0 +1,22 @@
+@import 'src/global/style/consts';
+
+.block {
+  margin: 0 25px 8px;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  outline: 1px dashed salmon;
+  position: relative;
+}
+
+.block-content {
+  flex: 1;
+}
+
+.text-block {
+  font-size: $ms-font-size-16;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.image-block {
+}
