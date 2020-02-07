@@ -1,15 +1,45 @@
 @import 'src/global/style/consts';
 
+$block-knob-size: 24px;
+$block-knob-margin: 2px;
+
 .block {
-  margin: 0 25px 8px;
-  display: flex;
+  margin: 0 25px 4px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  outline: 1px dashed salmon;
   position: relative;
+  display: flex;
+
+  .dragHandle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $block-knob-size;
+    height: $block-knob-size;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 15px;
+    color: $ms-color-gray130;
+    transition: visibility 0.25s, opacity 0.25s, background-color 0.25s;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $ms-color-gray20;
+    }
+  }
+
+  &:hover {
+    .dragHandle {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
 .block-content {
   flex: 1;
+  margin-left: 4px;
 }
 
 .text-block {

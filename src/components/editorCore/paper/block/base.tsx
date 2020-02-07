@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Icon } from 'office-ui-fabric-react';
 
 import { RefManagement } from 'src/components/editorCore/paper/refManagement';
 
@@ -71,6 +71,9 @@ class Base<P, S> extends Component<P & IBaseBlockProps, S> {
         onClick={ this.onBlockClick }
         onKeyDown={ this.onBlockKeyDown }
       >
+        <div className={ css.dragHandle }>
+          <Icon iconName='GlobalNavButton'/>
+        </div>
         <div className={ css.blockContent }>{ this.paint() }</div>
       </div>
     );
