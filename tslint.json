@@ -1,12 +1,22 @@
 {
-  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"],
-  "extends": ["tslint-microsoft-contrib/recommended"],
+  "rulesDirectory": [
+    "node_modules/tslint-microsoft-contrib"
+  ],
+  "extends": [
+    "tslint-microsoft-contrib/recommended"
+  ],
   "rules": {
     "import-name": false,
     "export-name": false,
     "no-relative-imports": true,
     "no-default-export": true,
     "react-this-binding-issue": false,
-    "whitespace": [true, "check-branch", "check-operator", "check-separator"]
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-operator",
+      "check-separator"
+    ],
+    "function-name": false
   }
 }
