@@ -7,20 +7,24 @@ import { blockMap } from 'src/components/editorCore/paper/blockMap';
 import blockCss from 'src/components/editorCore/paper/block/block.scss';
 import css from 'src/components/editorCore/paper/paper.scss';
 
+
 class Paper extends Component {
   contentRef = createRef<HTMLDivElement>();
 
+
   refManagement = new RefManagement();
+
 
   state = {
     blocks: createInitialBlocks(),
   };
 
+
   // 找到最近的block并focus它
   onClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const { refManagement } = this;
     const { offsetX, offsetY } = e.nativeEvent;
-    const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${blockCss.block}`);
+    const allBlocks = document.querySelectorAll<HTMLDivElement>(`.${ blockCss.block }`);
     const { offsetTop, offsetLeft } = this.contentRef.current!;
 
     let lastDistance = Number.MAX_SAFE_INTEGER;
@@ -50,16 +54,18 @@ class Paper extends Component {
     targetRef?.focus();
   };
 
+
   render() {
     console.log('render paper');
     return (
-      <div className={css.paper}>
-        <div className={css.content} onClick={this.onClick} role='document' ref={this.contentRef}>
-          {this.state.blocks.map(block => blockMap(block!, this.refManagement))}
+      <div className={ css.paper }>
+        <div className={ css.content } onClick={ this.onClick } role='document' ref={ this.contentRef }>
+          { this.state.blocks.map(block => blockMap(block!, this.refManagement)) }
         </div>
       </div>
     );
   }
 }
+
 
 export { Paper };

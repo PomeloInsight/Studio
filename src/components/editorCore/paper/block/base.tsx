@@ -20,16 +20,19 @@ class Base<P, S> extends Component<P & IBaseBlockProps, S> {
    */
   focus = () => {};
 
+
   /**
    * block点击事件
    * @param _
    */
   onClick = (_: React.MouseEvent<HTMLDivElement, MouseEvent>) => {};
 
+
   /**
    * block的内容
    */
   paint = (): JSX.Element | null | undefined => null;
+
 
   /**
    * 判断当前光标位置在block内能不能focus上一个/下一个block
@@ -37,6 +40,7 @@ class Base<P, S> extends Component<P & IBaseBlockProps, S> {
    * @param _
    */
   canFocusNear = (_: 'prev' | 'next') => true;
+
 
   /**
    * block被点击时，其click事件不应该被上层组件捕获，冒泡行为应该在该层停止
@@ -47,6 +51,7 @@ class Base<P, S> extends Component<P & IBaseBlockProps, S> {
     event.stopPropagation();
     this.onClick(event);
   };
+
 
   /**
    * 处理block内↑↓键按下时相邻block是否focus的逻辑

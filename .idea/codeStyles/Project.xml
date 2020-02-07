@@ -39,7 +39,7 @@
     <codeStyleSettings language="TypeScript">
       <option name="BLANK_LINES_AFTER_IMPORTS" value="2" />
       <option name="BLANK_LINES_AROUND_CLASS" value="2" />
-      <option name="BLANK_LINES_AROUND_FIELD" value="1" />
+      <option name="BLANK_LINES_AROUND_FIELD" value="2" />
       <option name="BLANK_LINES_AROUND_METHOD" value="2" />
       <option name="BLANK_LINES_AROUND_FIELD_IN_INTERFACE" value="1" />
       <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
