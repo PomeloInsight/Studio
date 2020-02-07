@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 import { RefManagement } from 'src/components/editorCore/paper/refManagement';
 
 import css from 'src/components/editorCore/paper/block/block.scss';

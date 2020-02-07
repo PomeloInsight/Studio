@@ -4,16 +4,20 @@ import { Base } from 'src/components/editorCore/paper/block/base';
 
 import css from 'src/components/editorCore/paper/block/block.scss';
 
+
 interface IImageBlockProps {
   block: IImageBlock;
 }
 
+
 class Image extends Base<IImageBlockProps, any> {
   paint = () => (
-    <div className={css.imageBlock}>
-      <img src={this.props.block.src} alt={this.props.block.caption} />
+    <div className={ css.imageBlock }>
+      <img src={ this.props.block.src } alt={ this.props.block.caption }/>
+      <span>{ this.props.block.caption }</span>
     </div>
   );
 }
+
 
 export { Image, IImageBlockProps };

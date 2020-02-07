@@ -2,6 +2,7 @@ import uuid from 'uuid/v1';
 import { EditorState } from 'draft-js';
 import { List } from 'immutable';
 
+
 const createParagraphBlockData = (id = uuid(), editorState = EditorState.createEmpty()): IParagraphBlock => ({
   id,
   type: 'paragraph',
@@ -11,7 +12,8 @@ const createParagraphBlockData = (id = uuid(), editorState = EditorState.createE
 const createImageBlockData = (id = uuid()): IImageBlock => ({
   id,
   type: 'image',
-  src: 'https://i2.hdslb.com/bfs/archive/5282323ba2831611b57154c9310ea9034adf7884.jpg@412w_232h_1c_100q.webp',
+  src: 'https://s2.ax1x.com/2020/02/07/1cvaLQ.jpg',
+  caption: 'John.Wick',
 });
 
 const switchBlock = (type: string) => {
